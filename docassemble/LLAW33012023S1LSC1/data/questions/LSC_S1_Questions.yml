@@ -9,10 +9,9 @@ continue button field: LSC_welcome_screen
 question: DD offence Question
 subquestion: |
   screen content here - e.g. have you been charged with a drink driving offence?
-field: LSC_charged_with_drink_driving_offence
-buttons:
-  - "No"
-  - "Yes"
+fields: 
+  - no label: LSC_charged_with_drink_driving_offence
+    datatype: yesnoradio 
 ---
 question: Other offence Question
 subquestion: |
