@@ -6,3 +6,4 @@ A docassemble extension.
 
 Amber Whalland-Stedman, whal0035@flinders.edu.au
 
+A change to keep GitHub happy

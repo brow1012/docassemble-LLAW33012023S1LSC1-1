@@ -43,10 +43,10 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
                 out.setdefault(package, []).append(prefix+name)
     return out
 
-setup(name='docassemble.whal0035LSCS1Draft',
+setup(name='docassemble.LLAW33012023S1LSC1',
       version='0.0.1',
       description=('A docassemble extension.'),
-      long_description='# docassemble.whal0035LSCS1Draft\n\nA docassemble extension.\n\n## Author\n\nAmber Whalland-Stedman, whal0035@flinders.edu.au\n\n',
+      long_description='# docassemble.whal0035LSCS1Draft\r\n\r\nA docassemble extension.\r\n\r\n## Author\r\n\r\nAmber Whalland-Stedman, whal0035@flinders.edu.au\r\n\r\nA change to keep GitHub happy',
       long_description_content_type='text/markdown',
       author='Amber Whalland-Stedman',
       author_email='whal0035@flinders.edu.au',
@@ -56,6 +56,6 @@ setup(name='docassemble.whal0035LSCS1Draft',
       namespace_packages=['docassemble'],
       install_requires=[],
       zip_safe=False,
-      package_data=find_package_data(where='docassemble/whal0035LSCS1Draft/', package='docassemble.whal0035LSCS1Draft'),
+      package_data=find_package_data(where='docassemble/LLAW33012023S1LSC1/', package='docassemble.LLAW33012023S1LSC1'),
      )
 
