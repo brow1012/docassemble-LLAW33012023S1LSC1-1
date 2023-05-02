@@ -9,17 +9,16 @@ continue button field: LSC_welcome_screen
 question: DD offence Question
 subquestion: |
   screen content here - e.g. have you been charged with a drink driving offence?
-fields: 
+fields:
   - no label: LSC_charged_with_drink_driving_offence
     datatype: yesnoradio 
 ---
 question: Other offence Question
 subquestion: |
   if no to previous charged with other offence question 
-field: LSC_charged_with_other
-buttons:
-  - "No"
-  - "Yes"
+fields: 
+  - no label: LSC_charged_with_other
+    datatype: yesnoradio
 ---
 question: Not charged with other- seeking general info
 subquestion: |
@@ -40,10 +39,10 @@ question: Yes DD charge start of interview
 subquestion: |
   I would like to know more about how (charge will effect me) 
 field: LSC_define_charge
-buttons:
-  - "LSC_DUI"
-  - "LSC_PCA"
-  - "LSC_RT"
+choices:
+  - DUI
+  - PCA
+  - RT
 ---
 # DUI SCREENS - KYLA
 question: Question
