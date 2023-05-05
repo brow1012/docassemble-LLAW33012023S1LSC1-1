@@ -5,26 +5,13 @@ include:
 mandatory: True
 code: |
   LSC_welcome_screen
-  if LSC_charged_with_drink_driving_offence == False:
-    if LSC_charged_with_other == True:
-      LSC_directory_Screen
-      LSC_gen_info_screen
-    else: 
-      LSC_seeking_gen_info
-      LSC_gen_info_screen
-  else: 
-    LSC_define_charge
----
-#mandatory: True
-code: |   
-  LSC_welcome_screen
   if LSC_charged_with_drink_driving_offence == 'No':
     if LSC_charged_with_other == 'No':
       LSC_seeking_gen_info
       LSC_gen_info_screen
     if LSC_charged_with_other == 'Yes':
       LSC_directory_Screen
-      LSC_gen_info_screen       
+      LSC_gen_info_screen
   if LSC_charged_with_drink_driving_offence == 'Yes':
     if LSC_define_charge == 'LSC_DUI':
       if LSC_child_present_DUI == 'No':
