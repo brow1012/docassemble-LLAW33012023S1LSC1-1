@@ -1,8 +1,9 @@
 ---
 question: Start
 subquestion: |
-  disclaimer
-  incl. SA jurisdiction + not  legal advice
+  This app is designed for use in South Australia and does not provide legal advice.
+  
+  Should you need legal advice, please contact a lawyer.
 continue button field: LSC_welcome_screen
 ---
 # MISC SCREENS - ELENI
@@ -77,11 +78,7 @@ subquestion: |
 # DUI SCREENS - KYLA
 question: Notice
 subquestion: |
-  If this is your first Driving Under the Influence offence you have been charged with, then you will be fined between $1100 and $1600.
- 
-  Or, you may face up to 6 months in prison, and get 6 demerit points.
- 
-  If you are found guilty of this offence, you will not be allowed to drive for at least 12     months.
+  display penalties for first DUI offence with no child
 continue button field: LSC_first_offence_no_c
 ---
 question: Question
