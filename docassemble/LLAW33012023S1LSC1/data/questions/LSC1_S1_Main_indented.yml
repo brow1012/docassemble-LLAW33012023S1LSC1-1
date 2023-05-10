@@ -1,0 +1,142 @@
+---
+include: 
+  - LSC_S1_Questions.yml
+---
+mandatory: True
+code: | 
+  # MISC/OTHER OFFENCES BRANCH
+  LSC_welcome_screen
+  if LSC_charged_with_drink_driving_offence == False:
+    if LSC_charged_with_other == True:
+      LSC_directory_Screen
+      LSC_gen_info_screen
+    else: 
+      LSC_seeking_gen_info
+      LSC_gen_info_screen
+  else: 
+    LSC_define_charge
+    
+  # DUI BRANCH 
+  if LSC_define_charge == 'LSC_DUI':
+    if LSC_child_present_DUI == False:
+      if LSC_first_offence_question_no_child == True: 
+        LSC_first_offence_no_c
+        LSC_end_screen
+      else: 
+        LSC_subsequent_offence_no_c
+        LSC_end_screen
+    else: 
+      if LSC_first_offence_question_yes_c_DUI == True:
+        LSC_first_offence_yes_c
+        LSC_end_screen
+      else: 
+        LSC_subsequent_offence_yes_c
+        LSC_end_screen
+              
+  # REFUSE TEST BRANCH     
+  if LSC_define_charge == 'LSC_RT':
+    if LSC_first_offence_q_RT == True:
+      if LSC_child_present_first_RT == False:
+        LSC_first_RT_no_c
+        LSC_end_screen
+      else:
+        LSC_first_RT_yes_c
+        LSC_end_screen
+    else:
+      if LSC_first_offence_q_RT == False:
+        if LSC_child_present_RT == False:
+          LSC_subsequent_RT_no_c
+          LSC_end_screen
+        else:
+          LSC_subsequent_RT_yes_c
+          LSC_end_screen
+        
+  # PROVISIONAL LICENCE PCA BRANCH 
+  if LSC_define_charge == 'LSC_PCA':
+    if LSC_licence_class == 'LSC_learners_provisional':
+        LSC_provisional_PCA
+        LSC_end_screen
+    # PCA FIRST OFFENCE BRANCH
+    else:
+      LSC_licence_class == 'LSC_full_license'
+      if LSC_PCA_first_offence_question == True: 
+        if LSC_BAC_range_question == 'LSC_low_BAC':
+          LSC_FO_PCA_low_BAC
+          LSC_end_screen
+        elif LSC_BAC_range_question == 'LSC_mid_BCA':
+          if LSC_PCA_FO_PCA_mid_BAC_child_question == False:
+            LSC_FO_PCA_mid_BAC_no_c
+            LSC_end_screen
+          else:
+            LSC_FO_PCA_mid_BAC_yes_c
+            LSC_end_screen
+        elif LSC_BAC_range_question == 'LSC_high_BAC':
+          if LSC_PCA_FO_high_BAC_child_question == False:
+            LSC_PCA_FO_high_BAC_no_c
+            LSC_end_screen
+          else:
+            LSC_PCA_FO_high_BAC_child_y
+            LSC_end_screen
+              
+      # PCA SECOND OFFENCE BRANCH
+      else: 
+        if LSC_PCA_subsequent_offence_number_question == 'LSC_PCA_second':
+          if LSC_PCA_SO_BAC_question == 'LSC_low_BAC_so':
+            LSC_PCA_SO_low_BAC
+            LSC_end_screen     
+          elif LSC_PCA_SO_BAC_question == 'LSC_mid_BAC_so':
+            if LSC_PCA_SO_mid_BAC_child_question == False:
+              LSC_PCA_SO_mid_BAC_child_n
+              LSC_end_screen
+            else:
+              LSC_PCA_SO_mid_BAC_child_y
+              LSC_end_screen
+          elif LSC_PCA_SO_BAC_question == 'LSC_high_BAC_so':  
+            if LSC_PCA_SO_high_BAC_child_question == False:
+              LSC_PCA_high_BAC_child_n
+              LSC_end_screen
+            else:
+              LSC_PCA_high_BAC_child_y
+              LSC_end_screen
+                
+        # PCA THIRD OFFENCE BRANCH                
+        elif LSC_PCA_subsequent_offence_number_question == 'LSC_PCA_third':
+          if LSC_PCA_TO_BAC_question == 'LSC_low_BAC_to':
+            LSC_PCA_TO_low_BAC
+            LSC_end_screen
+              
+        elif LSC_PCA_TO_BAC_question == 'LSC_mid_BAC_to':
+          if LSC_PCA_TO_mid_BAC_questions == True:
+            LSC_PCA_TO_mid_BAC_child_y
+            LSC_end_screen
+          else:
+            LSC_PCA_TO_mid_BAC_child_n
+            LSC_end_screen        
+        elif LSC_PCA_TO_BAC_question == 'LSC_high_BAC_to':
+          if LSC_PCA_TO_high_BAC_child_question == True:
+            LSC_PCA_TO_high_BAC_child_y
+            LSC_end_screen
+          else: 
+            LSC_PCA_TO_high_BAC_child_n
+            LSC_end_screen
+                
+      # PCA SUBSEQUENT OFFENCE BRANCH
+        elif LSC_PCA_subsequent_offence_number_question == 'LSC_PCA_subsequent':
+          if LSC_PCA_SUB_BAC_question == 'LSC_SUB_low_BAC':
+            LSC_SUB_low_BAC
+            LSC_end_screen  
+          elif LSC_PCA_SUB_BAC_question == 'LSC_SUB_mid_BAC':
+            if LSC_PCA_SUB_mid_BAC_child_quesiton == True:
+              LSC_PCA_SUB_mid_BAC_child_y
+              LSC_end_screen
+            else:
+              LSC_PCA_SUB_mid_BAC_child_n
+              LSC_end_screen
+          elif LSC_PCA_SUB_BAC_question == 'LSC_SUB_high_BAC':
+            if LSC_PCA_SUB_high_BAC_child_question == True: 
+              LSC_PCA_SUB_high_BAC_child_y
+              LSC_end_screen
+            else:
+              LSC_PCA_SUB_high_BAC_child_n
+              LSC_end_screen
+---

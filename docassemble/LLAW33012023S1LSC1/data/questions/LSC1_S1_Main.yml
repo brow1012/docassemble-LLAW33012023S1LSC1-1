@@ -4,8 +4,8 @@ include:
 ---
 mandatory: True
 code: | 
-  # MISC/OTHER OFFENCES BRANCH
-  LSC_welcome_screen
+    # MISC/OTHER OFFENCES BRANCH
+ LSC_welcome_screen
   if LSC_charged_with_drink_driving_offence == False:
     if LSC_charged_with_other == True:
       LSC_directory_Screen
