@@ -1,9 +1,8 @@
 ---
 question: Start
 subquestion: |
-  This app is designed for use in South Australia and does not provide legal advice.
-  
-  Should you need legal advice, please contact a lawyer.
+  disclaimer
+  incl. SA jurisdiction + not  legal advice
 continue button field: LSC_welcome_screen
 ---
 # MISC SCREENS - ELENI
@@ -102,7 +101,7 @@ continue button field: LSC_first_offence_yes_c
 # REFUSE BREATH TEST SCREENS - ANARA
 question: Question
 subquestion: |
-  first offence question for refusing breath test (RT) 
+  Is this the first time you have refused to do a breath alcotest?
 field: LSC_first_offence_q_RT
 buttons:
   - "No"
@@ -110,7 +109,7 @@ buttons:
 ---
 question: Question
 subquestion: |
-  child present when present for subsequent RT offence
+  Was a child under the age of 16 years present in the vehicle when you refused the breath alcotest?
 field: LSC_child_present_RT
 buttons:
   - "No"
@@ -118,17 +117,29 @@ buttons:
 ---
 question: Notice
 subquestion: |
-  display penalties for subsequent RT with no child in car
+  You should expect to see a $1900 - $2900 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 36 months. If you would like to learn more, please click here. 
+  
+  You have committed what is known as a ‘serious offence’. Because of this, you will also have an ‘alcohol interlock device’ fitted to your vehicle for the same time that your licence is disqualified for. For example, if your licence is disqualified for 3 years, you will have the device attached to your vehicle for another 3 years once you have your licence back. 
+  
+  These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
+  
+  There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
 continue button field: LSC_subsequent_RT_no_c
 ---
 question: Notice
 subquestion: |
-  display penalties for subsequent RT offence with child in car 
+  You should expect to see a $1900 - $2900 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 36 months. You will also need to do an alcohol dependence assessment. If you would like to learn more, please click here. 
+  
+  You have committed what is known as a ‘serious offence’. Because of this, you will also have an ‘alcohol interlock device’ fitted to your vehicle for the same time that your licence is disqualified for. For example, if your licence is disqualified for 3 years, you will have the device attached to your vehicle for another 3 years once you have your licence back. 
+  
+  These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
+  
+  There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
 continue button field: LSC_subsequent_RT_yes_c
 ---
 question: Question
 subquestion: |
-  First RT offence - child present question
+  Was a child under the age of 16 years in the vehicle when you refused the breath alcotest?
 field: LSC_child_present_first_RT
 buttons:
   - "No"
@@ -136,12 +147,24 @@ buttons:
 ---
 question: Notice
 subquestion: |
-  display penalties for frist RT offence with no child
+  You should expect to get a $1160 - $1600 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 12 months from the date of the offence. 
+  
+  You have committed what is known as a ‘serious offence’. Because of this, you will also have an ‘alcohol interlock device’ fitted to your vehicle for the same time that your licence is disqualified for. For example, if your licence is disqualified for 3 years, you will have the device attached to your vehicle for another 3 years once you have your licence back. 
+  
+  These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
+  
+  There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
 continue button field: LSC_first_RT_no_c
 ---
 question: Notice
 subquestion: |
-  display penalties for first RT offence with child
+  You should expect to get a $1160 - $1600 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 12 months from the date of the offence. You will also need to do an alcohol dependence assessment. 
+  
+  You have committed what is known as a ‘serious offence’. Because of this, you will also have an ‘alcohol interlock device’ fitted to your vehicle for the same time that your licence is disqualified for. For example, if your licence is disqualified for 3 years, you will have the device attached to your vehicle for another 3 years once you have your licence back. 
+  
+  These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
+  
+  There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
 continue button field: LSC_first_RT_yes_c
 ---
 # PCA SCREENS - JOSH
