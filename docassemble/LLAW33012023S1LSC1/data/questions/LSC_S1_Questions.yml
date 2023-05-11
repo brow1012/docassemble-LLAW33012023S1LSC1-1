@@ -9,10 +9,9 @@ continue button field: LSC_welcome_screen
 question: DD offence Question
 subquestion: |
   screen content here - e.g. have you been charged with a drink driving offence?
-field: LSC_charged_with_drink_driving_offence
-buttons:
-  - "No"
-  - "Yes"
+fields:
+  - no label: LSC_charged_with_drink_driving_offence
+    datatype: yesnoradio
 ---
 question: Other offence Question
 subquestion: |
@@ -102,19 +101,18 @@ continue button field: LSC_first_offence_yes_c
 question: Question
 subquestion: |
   Is this the first time you have refused to do a breath alcotest?
-field: LSC_first_offence_q_RT
-buttons:
-  - "No"
-  - "Yes"
+fields: 
+  - no label: LSC_first_offence_q_RT
+    datatype: yesnoradio
 ---
 question: Question
 subquestion: |
   Was a child under the age of 16 years present in the vehicle when you refused the breath alcotest?
-field: LSC_child_present_RT
-buttons:
-  - "No"
-  - "Yes"
+fields:
+  - no label: LSC_child_present_RT
+    datatype: yesnoradio 
 ---
+Event: LSC_subsequent_RT_no_c
 question: Notice
 subquestion: |
   You should expect to see a $1900 - $2900 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 36 months. If you would like to learn more, please click here. 
@@ -124,8 +122,11 @@ subquestion: |
   These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
   
   There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
-continue button field: LSC_subsequent_RT_no_c
+buttons: 
+  - continue: LSC_end_screen
+  - restart: restart
 ---
+event: LSC_subsequent_RT_yes_c
 question: Notice
 subquestion: |
   You should expect to see a $1900 - $2900 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 36 months. You will also need to do an alcohol dependence assessment. If you would like to learn more, please click here. 
@@ -135,16 +136,18 @@ subquestion: |
   These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
   
   There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
-continue button field: LSC_subsequent_RT_yes_c
+buttons: 
+  - continue: LSC_end_screen
+  - restart: restart
 ---
 question: Question
 subquestion: |
   Was a child under the age of 16 years in the vehicle when you refused the breath alcotest?
-field: LSC_child_present_first_RT
-buttons:
-  - "No"
-  - "Yes"
+fields:
+  - no label: LSC_child_present_first_RT
+    datatype: yesnoradio
 ---
+event: LSC_first_RT_no_c
 question: Notice
 subquestion: |
   You should expect to get a $1160 - $1600 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 12 months from the date of the offence. 
@@ -154,8 +157,11 @@ subquestion: |
   These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
   
   There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
-continue button field: LSC_first_RT_no_c
+buttons: 
+  - continue: LSC_end_screen
+  - restart: restart
 ---
+event: LSC_first_RT_yes_c
 question: Notice
 subquestion: |
   You should expect to get a $1160 - $1600 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 12 months from the date of the offence. You will also need to do an alcohol dependence assessment. 
@@ -165,7 +171,9 @@ subquestion: |
   These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
   
   There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
-continue button field: LSC_first_RT_yes_c
+buttons: 
+  - continue: LSC_end_screen
+  - restart: restart
 ---
 # PCA SCREENS - JOSH
 question: Question
