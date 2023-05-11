@@ -16,10 +16,9 @@ fields:
 question: Other offence Question
 subquestion: |
   if no to previous charged with other offence question 
-field: LSC_charged_with_other
-buttons:
-  - "No"
-  - "Yes"
+fields: 
+  - no label: LSC_charged_with_other
+    datatype: yesnoradio
 ---
 question: Not charged with other- seeking general info
 subquestion: |
@@ -39,28 +38,28 @@ continue button field: LSC_directory_Screen
 question: Yes DD charge start of interview 
 subquestion: |
   I would like to know more about how (charge will effect me) 
-field: LSC_define_charge
-buttons:
-  - "LSC_DUI"
-  - "LSC_PCA"
-  - "LSC_RT"
+fields: 
+  - no label: LSC_define_charge
+    datatype: radio
+    choices:
+      - Driving Under the Influence (DUI): LSC_DUI
+      - Perscribed Concentration of Alcohol (PCA): LSC_PCA
+      - Refusing a Breath Test: LSC_RT 
 ---
 # DUI SCREENS - KYLA
 question: Question
 subquestion: |
   was a child present at the time of the DUI
-field: LSC_child_present_DUI
-buttons:
-  - "No"
-  - "Yes"
+fields:
+  - no label: LSC_child_present_DUI
+    datatype: yesnoradio 
 ---
 question: Question
 subquestion: |
   No child - first offence question 
-field: LSC_first_offence_question_no_child
-buttons:
-  - "No"
-  - "Yes"
+fields:
+  - no label: LSC_first_offence_question_no_child
+    datatype: yesnoradio 
 ---
 question: Notice
 subquestion: |
@@ -82,10 +81,9 @@ continue button field: LSC_first_offence_no_c
 question: Question
 subquestion: |
   first offence but child present question 
-field: LSC_first_offence_question_yes_c_DUI
-buttons:
-  - "No"
-  - "Yes"
+fields:
+  - no label: LSC_first_offence_question_yes_c_DUI
+    datatype: yesnoradio 
 ---
 question: Notice
 subquestion: |
@@ -179,10 +177,12 @@ buttons:
 question: Question
 subquestion: |
   PCA offence - licence class question
-field: LSC_licence_class
-buttons:
-  - "LSC_full_license"
-  - "LSC_learners_provisional"
+fields:
+  - no label: LSC_licence_class
+    datatype: radio
+    choices:
+      - Learners or Provisional licence: LSC_learners_provisional
+      - Full licence: LSC_full_license 
 ---
 question: Notice
 subquestion: |
@@ -192,19 +192,20 @@ continue button field: LSC_provisional_PCA
 question: Question
 subquestion: |
   full licence PCA - first offence question
-field: LSC_PCA_first_offence_question
-buttons:
-  - "No"
-  - "Yes"
+fields:
+  - no label: LSC_PCA_first_offence_question
+    datatype: yesnoradio 
 ---
 question: Question
 subquestion: |
   first offence BAC range question
-field: LSC_BAC_range_question
-buttons:
-  - "LSC_high_BAC"
-  - "LSC_low_BAC"
-  - "LSC_mid_BCA"
+fields: 
+  - no label: LSC_BAC_range_question
+    datatype: radio
+    choices: 
+      - Below 0.08: LSC_low_BAC
+      - Between 0.08 - 0.15: LSC_mid_BCA
+      - Greater than 0.15: LSC_high_BAC
 ---
 question: Notice
 subquestion: |
@@ -214,10 +215,9 @@ continue button field: LSC_FO_PCA_low_BAC
 question: Question
 subquestion: |
   first offence - mid BAC - child present question
-field: LSC_PCA_FO_PCA_mid_BAC_child_question
-buttons:
-  - "No"
-  - "Yes"
+fields:
+  - no label: LSC_PCA_FO_PCA_mid_BAC_child_question
+    datatype: yesnoradio 
 ---
 question: Notice
 subquestion: |
@@ -232,10 +232,9 @@ continue button field: LSC_FO_PCA_mid_BAC_yes_c
 question: Question
 subquestion: |
   high BAC PCA - child presnet? 
-field: LSC_PCA_FO_high_BAC_child_question
-buttons:
-  - "No"
-  - "Yes"
+fields:
+  - no label: LSC_PCA_FO_high_BAC_child_question
+    datatype: yesnoradio 
 ---
 question: Notice
 subquestion: |
@@ -250,38 +249,46 @@ continue button field: LSC_PCA_FO_high_BAC_child_y
 question: Question
 subquestion: |
   which subsequent offence bracket 
-field: LSC_PCA_subsequent_offence_number_question
-buttons:
-  - "LSC_PCA_second"
-  - "LSC_PCA_subsequent"
-  - "LSC_PCA_third"
+fields:
+  - no label: LSC_PCA_subsequent_offence_number_question
+    datatype: radio 
+    choices:
+      - Second offence: LSC_PCA_second
+      - Third offence: LSC_PCA_third
+      - Fourth of subsequent offence: LSC_PCA_subsequent
 ---
 question: Question
 subquestion: |
   second offence BAC question
-field: LSC_PCA_SO_BAC_question
-buttons:
-  - "LSC_high_BAC_so"
-  - "LSC_low_BAC_so"
-  - "LSC_mid_BAC_so"
+fields: 
+  - no label: LSC_PCA_SO_BAC_question
+    datatype: radio
+    choices: 
+      - Below 0.08: LSC_low_BAC_so
+      - Between 0.08 - 0.15: LSC_mid_BAC_so
+      - Greater than 0.15: LSC_high_BAC_so
 ---
 question: Question
 subquestion: |
   third offence BAC question
-field: LSC_PCA_TO_BAC_question
-buttons:
-  - "LSC_high_BAC_to"
-  - "LSC_low_BAC_to"
-  - "LSC_mid_BAC_to"
+fields: 
+  - no label: LSC_PCA_TO_BAC_question
+    datatype: radio
+    choices: 
+      - Below 0.08: LSC_low_BAC_to
+      - Between 0.08 - 0.15: LSC_mid_BAC_to
+      - Greater than 0.15: LSC_high_BAC_to
 ---
 question: Question
 subquestion: |
   subsequent offence BAC question
-field: LSC_PCA_SUB_BAC_question
-buttons:
-  - "LSC_SUB_high_BAC"
-  - "LSC_SUB_low_BAC"
-  - "LSC_SUB_mid_BAC"
+fields:
+  - no label: LSC_PCA_SUB_BAC_question
+    datatype: radio 
+    choices: 
+      - Below 0.08: LSC_SUB_low_BAC
+      - Between 0.08 - 0.15: LSC_SUB_mid_BAC
+      - Greater than 0.15: LSC_SUB_high_BAC
 ---
 question: Notice
 subquestion: |
@@ -291,10 +298,9 @@ continue button field: LSC_PCA_SO_low_BAC
 question: Question
 subquestion: |
   SECOND OFFENCE - mid range BAC - child present question
-field: LSC_PCA_SO_mid_BAC_child_question
-buttons:
-  - "No"
-  - "Yes"
+fields:
+  - no label: LSC_PCA_SO_mid_BAC_child_question
+    datatype: yesnoradio 
 ---
 question: Notice
 subquestion: |
@@ -309,10 +315,9 @@ continue button field: LSC_PCA_SO_mid_BAC_child_y
 question: Question
 subquestion: |
   high BAC - was child present? second offence
-field: LSC_PCA_SO_high_BAC_child_question
-buttons:
-  - "No"
-  - "Yes"
+fields:
+  - no label: LSC_PCA_SO_high_BAC_child_question
+    datatype: yesnoradio 
 ---
 question: Notice
 subquestion: |
@@ -332,10 +337,9 @@ continue button field: LSC_PCA_TO_low_BAC
 question: Question
 subquestion: |
   BAC question for third offence
-field: LSC_PCA_TO_mid_BAC_questions
-buttons:
-  - "No"
-  - "Yes"
+fields:
+  - no label: LSC_PCA_TO_mid_BAC_questions
+    datatype: yesnoradio 
 ---
 question: Notice
 subquestion: |
@@ -350,10 +354,9 @@ continue button field: LSC_PCA_TO_mid_BAC_child_n
 question: Question
 subquestion: |
   high BAC child present question
-field: LSC_PCA_TO_high_BAC_child_question
-buttons:
-  - "No"
-  - "Yes"
+fields:
+  - no label: LSC_PCA_TO_high_BAC_child_question
+    datatype: yesnoradio 
 ---
 question: Notice
 subquestion: |
@@ -373,10 +376,9 @@ continue button field: LSC_SUB_low_BAC
 question: Question
 subquestion: |
   subsequent offence - mid BAC child question
-field: LSC_PCA_SUB_mid_BAC_child_quesiton
-buttons:
-  - "No"
-  - "Yes"
+fields:
+  - no label: LSC_PCA_SUB_mid_BAC_child_quesiton
+    datatype: yesnoradio 
 ---
 question: Notice
 subquestion: |
@@ -391,10 +393,9 @@ continue button field: LSC_PCA_SUB_mid_BAC_child_n
 question: Question
 subquestion: |
   subsequent offence high BAC - child question
-field: LSC_PCA_SUB_high_BAC_child_question
-buttons:
-  - "No"
-  - "Yes"
+fields:
+  - no label: LSC_PCA_SUB_high_BAC_child_question
+    datatype: yesnoradio
 ---
 question: Notice
 subquestion: |
