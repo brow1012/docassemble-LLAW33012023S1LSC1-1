@@ -3,7 +3,10 @@ question: Start
 subquestion: |
   disclaimer
   incl. SA jurisdiction + not  legal advice
-continue button field: LSC_welcome_screen
+field: LSC_welcome_screen
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 # MISC SCREENS - ELENI
 question: DD offence Question
@@ -29,11 +32,17 @@ event: LSC_gen_info_screen
 question: End
 subquestion: |
   display LSC drink driving fact sheet + help line
+buttons: 
+  - Exit: exit 
+  - Restart: restart
 ---
 question: Yes charged with other 
 subquestion: |
   LSC directory link
-continue button field: LSC_directory_Screen
+field: LSC_directory_Screen
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Yes DD charge start of interview 
 subquestion: |
@@ -64,19 +73,28 @@ fields:
 question: Notice
 subquestion: |
   display penalties for subsequent DUI offence with no child
-continue button field: LSC_subsequent_offence_no_c
+field: LSC_subsequent_offence_no_c
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 # MISC SCREEN - ELENI
 event: LSC_end_screen
 question: End
 subquestion: |
   sample text: we hope this has been helpful, for further guidance please reach out the LSC at (08) 8223 2999
+buttons: 
+  - Exit: exit
+  - Restart: restart 
 ---
 # DUI SCREENS - KYLA
 question: Notice
 subquestion: |
   display penalties for first DUI offence with no child
-continue button field: LSC_first_offence_no_c
+field: LSC_first_offence_no_c
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Question
 subquestion: |
@@ -88,12 +106,18 @@ fields:
 question: Notice
 subquestion: |
   display penalties for subsequent offence with child in car
-continue button field: LSC_subsequent_offence_yes_c
+field: LSC_subsequent_offence_yes_c
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Notice
 subquestion: |
   display penalties for first offence wth child in car
-continue button field: LSC_first_offence_yes_c
+field: LSC_first_offence_yes_c
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 # REFUSE BREATH TEST SCREENS - ANARA
 question: Question
@@ -110,7 +134,6 @@ fields:
   - no label: LSC_child_present_RT
     datatype: yesnoradio 
 ---
-Event: LSC_subsequent_RT_no_c
 question: Notice
 subquestion: |
   You should expect to see a $1900 - $2900 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 36 months. If you would like to learn more, please click here. 
@@ -120,11 +143,11 @@ subquestion: |
   These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
   
   There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
+field: LSC_subsequent_RT_no_c
 buttons: 
-  - continue: LSC_end_screen
-  - restart: restart
+  - Proceed: proceed
+  - Exit: exit
 ---
-event: LSC_subsequent_RT_yes_c
 question: Notice
 subquestion: |
   You should expect to see a $1900 - $2900 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 36 months. You will also need to do an alcohol dependence assessment. If you would like to learn more, please click here. 
@@ -134,9 +157,10 @@ subquestion: |
   These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
   
   There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
+field: LSC_subsequent_RT_yes_c
 buttons: 
-  - continue: LSC_end_screen
-  - restart: restart
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Question
 subquestion: |
@@ -145,7 +169,6 @@ fields:
   - no label: LSC_child_present_first_RT
     datatype: yesnoradio
 ---
-event: LSC_first_RT_no_c
 question: Notice
 subquestion: |
   You should expect to get a $1160 - $1600 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 12 months from the date of the offence. 
@@ -155,11 +178,11 @@ subquestion: |
   These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
   
   There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
+field: LSC_first_RT_no_c
 buttons: 
-  - continue: LSC_end_screen
-  - restart: restart
+  - Proceed: proceed
+  - Exit: exit
 ---
-event: LSC_first_RT_yes_c
 question: Notice
 subquestion: |
   You should expect to get a $1160 - $1600 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 12 months from the date of the offence. You will also need to do an alcohol dependence assessment. 
@@ -169,9 +192,10 @@ subquestion: |
   These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
   
   There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
+field: LSC_first_RT_yes_c
 buttons: 
-  - continue: LSC_end_screen
-  - restart: restart
+  - Proceed: proceed
+  - Exit: exit
 ---
 # PCA SCREENS - JOSH
 question: Question
@@ -187,7 +211,10 @@ fields:
 question: Notice
 subquestion: |
   provisional licence PCA penalties screen
-continue button field: LSC_provisional_PCA
+field: LSC_provisional_PCA
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Question
 subquestion: |
@@ -210,7 +237,10 @@ fields:
 question: Notice
 subquestion: |
   first offence PCA - low BAC penalties screen
-continue button field: LSC_FO_PCA_low_BAC
+field: LSC_FO_PCA_low_BAC
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Question
 subquestion: |
@@ -222,12 +252,18 @@ fields:
 question: Notice
 subquestion: |
   display penalties for mid BAC with no child
-continue button field: LSC_FO_PCA_mid_BAC_no_c
+field: LSC_FO_PCA_mid_BAC_no_c
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Notice
 subquestion: |
   display penalties for mid BAC with child present 
-continue button field: LSC_FO_PCA_mid_BAC_yes_c
+field: LSC_FO_PCA_mid_BAC_yes_c
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Question
 subquestion: |
@@ -239,12 +275,18 @@ fields:
 question: Notice
 subquestion: |
   display penalties for high BAC first offence with no child
-continue button field: LSC_PCA_FO_high_BAC_no_c
+field: LSC_PCA_FO_high_BAC_no_c
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Notice
 subquestion: |
   display penalties for high BAC first offence with child
-continue button field: LSC_PCA_FO_high_BAC_child_y
+field: LSC_PCA_FO_high_BAC_child_y
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Question
 subquestion: |
@@ -293,7 +335,10 @@ fields:
 question: Notice
 subquestion: |
   display penalties for second offence - low BAC
-continue button field: LSC_PCA_SO_low_BAC
+field: LSC_PCA_SO_low_BAC
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Question
 subquestion: |
@@ -305,12 +350,18 @@ fields:
 question: Notice
 subquestion: |
   display penalties for mid BAC with no child
-continue button field: LSC_PCA_SO_mid_BAC_child_n
+field: LSC_PCA_SO_mid_BAC_child_n
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Notice
 subquestion: |
   display penalties for mid BAC with child
-continue button field: LSC_PCA_SO_mid_BAC_child_y
+field: LSC_PCA_SO_mid_BAC_child_y
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Question
 subquestion: |
@@ -322,17 +373,26 @@ fields:
 question: Notice
 subquestion: |
   display penalties for high BAC second offence with no child
-continue button field: LSC_PCA_high_BAC_child_n
+field: LSC_PCA_high_BAC_child_n
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Notice
 subquestion: |
   display penalties for high BAC second offence with child
-continue button field: LSC_PCA_high_BAC_child_y
+field: LSC_PCA_high_BAC_child_y
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Notice
 subquestion: |
   display penalties for third offence with low BAC
-continue button field: LSC_PCA_TO_low_BAC
+field: LSC_PCA_TO_low_BAC
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Question
 subquestion: |
@@ -344,12 +404,18 @@ fields:
 question: Notice
 subquestion: |
   display penalties for third offence mid BAC with child
-continue button field: LSC_PCA_TO_mid_BAC_child_y
+field: LSC_PCA_TO_mid_BAC_child_y
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Notice
 subquestion: |
   display penalties for third offence mid BAC without child
-continue button field: LSC_PCA_TO_mid_BAC_child_n
+field: LSC_PCA_TO_mid_BAC_child_n
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Question
 subquestion: |
@@ -361,17 +427,26 @@ fields:
 question: Notice
 subquestion: |
   display penalties for third offence high BAC with child 
-continue button field: LSC_PCA_TO_high_BAC_child_y
+field: LSC_PCA_TO_high_BAC_child_y
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Notice
 subquestion: |
-  display penalties for third offence High BAC with child
-continue button field: LSC_PCA_TO_high_BAC_child_n
+  display penalties for third offence High BAC with no child
+field: LSC_PCA_TO_high_BAC_child_n
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Notice
 subquestion: |
   display penalties for subsequent offence with low BAC
-continue button field: LSC_SUB_low_BAC
+field: LSC_SUB_low_BAC
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Question
 subquestion: |
@@ -383,12 +458,18 @@ fields:
 question: Notice
 subquestion: |
   display penalties for subsequent offence with mid BAC and child
-continue button field: LSC_PCA_SUB_mid_BAC_child_y
+field: LSC_PCA_SUB_mid_BAC_child_y
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Notice
 subquestion: |
   display penalties for subsequent offence with mid BAC with no child
-continue button field: LSC_PCA_SUB_mid_BAC_child_n
+field: LSC_PCA_SUB_mid_BAC_child_n
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Question
 subquestion: |
@@ -400,10 +481,16 @@ fields:
 question: Notice
 subquestion: |
   display penalties for subsequent offence with high BAC with child
-continue button field: LSC_PCA_SUB_high_BAC_child_y
+field: LSC_PCA_SUB_high_BAC_child_y
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 question: Notice
 subquestion: |
   display penalties for subsequent offence with high BAC - no child
-continue button field: LSC_PCA_SUB_high_BAC_child_n
+field: LSC_PCA_SUB_high_BAC_child_n
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
