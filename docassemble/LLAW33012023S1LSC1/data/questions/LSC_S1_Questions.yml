@@ -110,7 +110,7 @@ fields:
   - no label: LSC_child_present_RT
     datatype: yesnoradio 
 ---
-Event: LSC_subsequent_RT_no_c
+event: LSC_subsequent_RT_no_c
 question: Notice
 subquestion: |
   You should expect to see a $1900 - $2900 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 36 months. If you would like to learn more, please click here. 
@@ -120,9 +120,10 @@ subquestion: |
   These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
   
   There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
+
 buttons: 
-  - continue: LSC_end_screen
-  - restart: restart
+  - Continue: continue 
+  - Restart: restart
 ---
 event: LSC_subsequent_RT_yes_c
 question: Notice
@@ -135,8 +136,8 @@ subquestion: |
   
   There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
 buttons: 
-  - continue: LSC_end_screen
-  - restart: restart
+  - Continue: continue
+  - Restart: restart
 ---
 question: Question
 subquestion: |
@@ -156,8 +157,8 @@ subquestion: |
   
   There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
 buttons: 
-  - continue: LSC_end_screen
-  - restart: restart
+  - Continue: continue
+  - Restart: restart
 ---
 event: LSC_first_RT_yes_c
 question: Notice
@@ -170,8 +171,8 @@ subquestion: |
   
   There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
 buttons: 
-  - continue: LSC_end_screen
-  - restart: restart
+  - Continue: continue
+  - Restart: restart
 ---
 # PCA SCREENS - JOSH
 question: Question
