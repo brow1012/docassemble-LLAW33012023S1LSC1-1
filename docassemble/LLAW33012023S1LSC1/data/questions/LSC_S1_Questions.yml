@@ -1,0 +1,409 @@
+---
+question: Start
+subquestion: |
+  disclaimer
+  incl. SA jurisdiction + not  legal advice
+continue button field: LSC_welcome_screen
+---
+# MISC SCREENS - ELENI
+question: DD offence Question
+subquestion: |
+  screen content here - e.g. have you been charged with a drink driving offence?
+fields:
+  - no label: LSC_charged_with_drink_driving_offence
+    datatype: yesnoradio
+---
+question: Other offence Question
+subquestion: |
+  if no to previous charged with other offence question 
+fields: 
+  - no label: LSC_charged_with_other
+    datatype: yesnoradio
+---
+question: Not charged with other- seeking general info
+subquestion: |
+  screen content 
+continue button field: LSC_seeking_gen_info
+---
+event: LSC_gen_info_screen
+question: End
+subquestion: |
+  display LSC drink driving fact sheet + help line
+---
+question: Yes charged with other 
+subquestion: |
+  LSC directory link
+continue button field: LSC_directory_Screen
+---
+question: Yes DD charge start of interview 
+subquestion: |
+  I would like to know more about how (charge will effect me) 
+fields: 
+  - no label: LSC_define_charge
+    datatype: radio
+    choices:
+      - Driving Under the Influence (DUI): LSC_DUI
+      - Perscribed Concentration of Alcohol (PCA): LSC_PCA
+      - Refusing a Breath Test: LSC_RT 
+---
+# DUI SCREENS - KYLA
+question: Question
+subquestion: |
+  was a child present at the time of the DUI
+fields:
+  - no label: LSC_child_present_DUI
+    datatype: yesnoradio 
+---
+question: Question
+subquestion: |
+  No child - first offence question 
+fields:
+  - no label: LSC_first_offence_question_no_child
+    datatype: yesnoradio 
+---
+question: Notice
+subquestion: |
+  display penalties for subsequent DUI offence with no child
+continue button field: LSC_subsequent_offence_no_c
+---
+# MISC SCREEN - ELENI
+event: LSC_end_screen
+question: End
+subquestion: |
+  sample text: we hope this has been helpful, for further guidance please reach out the LSC at (08) 8223 2999
+---
+# DUI SCREENS - KYLA
+question: Notice
+subquestion: |
+  display penalties for first DUI offence with no child
+continue button field: LSC_first_offence_no_c
+---
+question: Question
+subquestion: |
+  first offence but child present question 
+fields:
+  - no label: LSC_first_offence_question_yes_c_DUI
+    datatype: yesnoradio 
+---
+question: Notice
+subquestion: |
+  display penalties for subsequent offence with child in car
+continue button field: LSC_subsequent_offence_yes_c
+---
+question: Notice
+subquestion: |
+  display penalties for first offence wth child in car
+continue button field: LSC_first_offence_yes_c
+---
+# REFUSE BREATH TEST SCREENS - ANARA
+question: Question
+subquestion: |
+  Is this the first time you have refused to do a breath alcotest?
+fields: 
+  - no label: LSC_first_offence_q_RT
+    datatype: yesnoradio
+---
+question: Question
+subquestion: |
+  Was a child under the age of 16 years present in the vehicle when you refused the breath alcotest?
+fields:
+  - no label: LSC_child_present_RT
+    datatype: yesnoradio 
+---
+Event: LSC_subsequent_RT_no_c
+question: Notice
+subquestion: |
+  You should expect to see a $1900 - $2900 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 36 months. If you would like to learn more, please click here. 
+  
+  You have committed what is known as a ‘serious offence’. Because of this, you will also have an ‘alcohol interlock device’ fitted to your vehicle for the same time that your licence is disqualified for. For example, if your licence is disqualified for 3 years, you will have the device attached to your vehicle for another 3 years once you have your licence back. 
+  
+  These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
+  
+  There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
+buttons: 
+  - continue: LSC_end_screen
+  - restart: restart
+---
+event: LSC_subsequent_RT_yes_c
+question: Notice
+subquestion: |
+  You should expect to see a $1900 - $2900 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 36 months. You will also need to do an alcohol dependence assessment. If you would like to learn more, please click here. 
+  
+  You have committed what is known as a ‘serious offence’. Because of this, you will also have an ‘alcohol interlock device’ fitted to your vehicle for the same time that your licence is disqualified for. For example, if your licence is disqualified for 3 years, you will have the device attached to your vehicle for another 3 years once you have your licence back. 
+  
+  These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
+  
+  There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
+buttons: 
+  - continue: LSC_end_screen
+  - restart: restart
+---
+question: Question
+subquestion: |
+  Was a child under the age of 16 years in the vehicle when you refused the breath alcotest?
+fields:
+  - no label: LSC_child_present_first_RT
+    datatype: yesnoradio
+---
+event: LSC_first_RT_no_c
+question: Notice
+subquestion: |
+  You should expect to get a $1160 - $1600 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 12 months from the date of the offence. 
+  
+  You have committed what is known as a ‘serious offence’. Because of this, you will also have an ‘alcohol interlock device’ fitted to your vehicle for the same time that your licence is disqualified for. For example, if your licence is disqualified for 3 years, you will have the device attached to your vehicle for another 3 years once you have your licence back. 
+  
+  These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
+  
+  There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
+buttons: 
+  - continue: LSC_end_screen
+  - restart: restart
+---
+event: LSC_first_RT_yes_c
+question: Notice
+subquestion: |
+  You should expect to get a $1160 - $1600 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 12 months from the date of the offence. You will also need to do an alcohol dependence assessment. 
+  
+  You have committed what is known as a ‘serious offence’. Because of this, you will also have an ‘alcohol interlock device’ fitted to your vehicle for the same time that your licence is disqualified for. For example, if your licence is disqualified for 3 years, you will have the device attached to your vehicle for another 3 years once you have your licence back. 
+  
+  These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
+  
+  There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
+buttons: 
+  - continue: LSC_end_screen
+  - restart: restart
+---
+# PCA SCREENS - JOSH
+question: Question
+subquestion: |
+  PCA offence - licence class question
+fields:
+  - no label: LSC_licence_class
+    datatype: radio
+    choices:
+      - Learners or Provisional licence: LSC_learners_provisional
+      - Full licence: LSC_full_license 
+---
+question: Notice
+subquestion: |
+  provisional licence PCA penalties screen
+continue button field: LSC_provisional_PCA
+---
+question: Question
+subquestion: |
+  full licence PCA - first offence question
+fields:
+  - no label: LSC_PCA_first_offence_question
+    datatype: yesnoradio 
+---
+question: Question
+subquestion: |
+  first offence BAC range question
+fields: 
+  - no label: LSC_BAC_range_question
+    datatype: radio
+    choices: 
+      - Below 0.08: LSC_low_BAC
+      - Between 0.08 - 0.15: LSC_mid_BCA
+      - Greater than 0.15: LSC_high_BAC
+---
+question: Notice
+subquestion: |
+  first offence PCA - low BAC penalties screen
+continue button field: LSC_FO_PCA_low_BAC
+---
+question: Question
+subquestion: |
+  first offence - mid BAC - child present question
+fields:
+  - no label: LSC_PCA_FO_PCA_mid_BAC_child_question
+    datatype: yesnoradio 
+---
+question: Notice
+subquestion: |
+  display penalties for mid BAC with no child
+continue button field: LSC_FO_PCA_mid_BAC_no_c
+---
+question: Notice
+subquestion: |
+  display penalties for mid BAC with child present 
+continue button field: LSC_FO_PCA_mid_BAC_yes_c
+---
+question: Question
+subquestion: |
+  high BAC PCA - child presnet? 
+fields:
+  - no label: LSC_PCA_FO_high_BAC_child_question
+    datatype: yesnoradio 
+---
+question: Notice
+subquestion: |
+  display penalties for high BAC first offence with no child
+continue button field: LSC_PCA_FO_high_BAC_no_c
+---
+question: Notice
+subquestion: |
+  display penalties for high BAC first offence with child
+continue button field: LSC_PCA_FO_high_BAC_child_y
+---
+question: Question
+subquestion: |
+  which subsequent offence bracket 
+fields:
+  - no label: LSC_PCA_subsequent_offence_number_question
+    datatype: radio 
+    choices:
+      - Second offence: LSC_PCA_second
+      - Third offence: LSC_PCA_third
+      - Fourth of subsequent offence: LSC_PCA_subsequent
+---
+question: Question
+subquestion: |
+  second offence BAC question
+fields: 
+  - no label: LSC_PCA_SO_BAC_question
+    datatype: radio
+    choices: 
+      - Below 0.08: LSC_low_BAC_so
+      - Between 0.08 - 0.15: LSC_mid_BAC_so
+      - Greater than 0.15: LSC_high_BAC_so
+---
+question: Question
+subquestion: |
+  third offence BAC question
+fields: 
+  - no label: LSC_PCA_TO_BAC_question
+    datatype: radio
+    choices: 
+      - Below 0.08: LSC_low_BAC_to
+      - Between 0.08 - 0.15: LSC_mid_BAC_to
+      - Greater than 0.15: LSC_high_BAC_to
+---
+question: Question
+subquestion: |
+  subsequent offence BAC question
+fields:
+  - no label: LSC_PCA_SUB_BAC_question
+    datatype: radio 
+    choices: 
+      - Below 0.08: LSC_SUB_low_BAC
+      - Between 0.08 - 0.15: LSC_SUB_mid_BAC
+      - Greater than 0.15: LSC_SUB_high_BAC
+---
+question: Notice
+subquestion: |
+  display penalties for second offence - low BAC
+continue button field: LSC_PCA_SO_low_BAC
+---
+question: Question
+subquestion: |
+  SECOND OFFENCE - mid range BAC - child present question
+fields:
+  - no label: LSC_PCA_SO_mid_BAC_child_question
+    datatype: yesnoradio 
+---
+question: Notice
+subquestion: |
+  display penalties for mid BAC with no child
+continue button field: LSC_PCA_SO_mid_BAC_child_n
+---
+question: Notice
+subquestion: |
+  display penalties for mid BAC with child
+continue button field: LSC_PCA_SO_mid_BAC_child_y
+---
+question: Question
+subquestion: |
+  high BAC - was child present? second offence
+fields:
+  - no label: LSC_PCA_SO_high_BAC_child_question
+    datatype: yesnoradio 
+---
+question: Notice
+subquestion: |
+  display penalties for high BAC second offence with no child
+continue button field: LSC_PCA_high_BAC_child_n
+---
+question: Notice
+subquestion: |
+  display penalties for high BAC second offence with child
+continue button field: LSC_PCA_high_BAC_child_y
+---
+question: Notice
+subquestion: |
+  display penalties for third offence with low BAC
+continue button field: LSC_PCA_TO_low_BAC
+---
+question: Question
+subquestion: |
+  BAC question for third offence
+fields:
+  - no label: LSC_PCA_TO_mid_BAC_questions
+    datatype: yesnoradio 
+---
+question: Notice
+subquestion: |
+  display penalties for third offence mid BAC with child
+continue button field: LSC_PCA_TO_mid_BAC_child_y
+---
+question: Notice
+subquestion: |
+  display penalties for third offence mid BAC without child
+continue button field: LSC_PCA_TO_mid_BAC_child_n
+---
+question: Question
+subquestion: |
+  high BAC child present question
+fields:
+  - no label: LSC_PCA_TO_high_BAC_child_question
+    datatype: yesnoradio 
+---
+question: Notice
+subquestion: |
+  display penalties for third offence high BAC with child 
+continue button field: LSC_PCA_TO_high_BAC_child_y
+---
+question: Notice
+subquestion: |
+  display penalties for third offence High BAC with child
+continue button field: LSC_PCA_TO_high_BAC_child_n
+---
+question: Notice
+subquestion: |
+  display penalties for subsequent offence with low BAC
+continue button field: LSC_SUB_low_BAC
+---
+question: Question
+subquestion: |
+  subsequent offence - mid BAC child question
+fields:
+  - no label: LSC_PCA_SUB_mid_BAC_child_quesiton
+    datatype: yesnoradio 
+---
+question: Notice
+subquestion: |
+  display penalties for subsequent offence with mid BAC and child
+continue button field: LSC_PCA_SUB_mid_BAC_child_y
+---
+question: Notice
+subquestion: |
+  display penalties for subsequent offence with mid BAC with no child
+continue button field: LSC_PCA_SUB_mid_BAC_child_n
+---
+question: Question
+subquestion: |
+  subsequent offence high BAC - child question
+fields:
+  - no label: LSC_PCA_SUB_high_BAC_child_question
+    datatype: yesnoradio
+---
+question: Notice
+subquestion: |
+  display penalties for subsequent offence with high BAC with child
+continue button field: LSC_PCA_SUB_high_BAC_child_y
+---
+question: Notice
+subquestion: |
+  display penalties for subsequent offence with high BAC - no child
+continue button field: LSC_PCA_SUB_high_BAC_child_n
+---
