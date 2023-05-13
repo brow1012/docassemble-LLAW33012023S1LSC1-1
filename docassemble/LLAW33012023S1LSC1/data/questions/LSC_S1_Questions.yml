@@ -9,16 +9,18 @@ continue button field: LSC_welcome_screen
 question: DD offence Question
 subquestion: |
   screen content here - e.g. have you been charged with a drink driving offence?
-fields:
-  - no label: LSC_charged_with_drink_driving_offence
-    datatype: yesnoradio
+field: LSC_charged_with_drink_driving_offence
+buttons:
+  - "No"
+  - "Yes"
 ---
 question: Other offence Question
 subquestion: |
   if no to previous charged with other offence question 
-fields: 
-  - no label: LSC_charged_with_other
-    datatype: yesnoradio
+field: LSC_charged_with_other
+buttons:
+  - "No"
+  - "Yes"
 ---
 question: Not charged with other- seeking general info
 subquestion: |
@@ -38,37 +40,32 @@ continue button field: LSC_directory_Screen
 question: Yes DD charge start of interview 
 subquestion: |
   I would like to know more about how (charge will effect me) 
-fields: 
-  - no label: LSC_define_charge
-    datatype: radio
-    choices:
-      - Driving Under the Influence (DUI): LSC_DUI
-      - Perscribed Concentration of Alcohol (PCA): LSC_PCA
-      - Refusing a Breath Test: LSC_RT 
+field: LSC_define_charge
+buttons:
+  - "LSC_DUI"
+  - "LSC_PCA"
+  - "LSC_RT"
 ---
 # DUI SCREENS - KYLA
 question: Question
 subquestion: |
   was a child present at the time of the DUI
-fields:
-  - no label: LSC_child_present_DUI
-    datatype: yesnoradio 
+field: LSC_child_present_DUI
+buttons:
+  - "No"
+  - "Yes"
 ---
 question: Question
 subquestion: |
   No child - first offence question 
-fields:
-  - no label: LSC_first_offence_question_no_child
-    datatype: yesnoradio 
+field: LSC_first_offence_question_no_child
+buttons:
+  - "No"
+  - "Yes"
 ---
 question: Notice
 subquestion: |
-  If this is not the first time you have been charged with a DUI offence, then you will be fined between $1900 and $2900.
- 
-  Or, you may face up to 3 months imprisonment and get 6 demerit points.
- 
-  If you are convicted, you will be disqualified from driving for a minimum of 36 months.
-
+  display penalties for subsequent DUI offence with no child
 continue button field: LSC_subsequent_offence_no_c
 ---
 # MISC SCREEN - ELENI
@@ -86,9 +83,10 @@ continue button field: LSC_first_offence_no_c
 question: Question
 subquestion: |
   first offence but child present question 
-fields:
-  - no label: LSC_first_offence_question_yes_c_DUI
-    datatype: yesnoradio 
+field: LSC_first_offence_question_yes_c_DUI
+buttons:
+  - "No"
+  - "Yes"
 ---
 question: Notice
 subquestion: |
@@ -97,98 +95,67 @@ continue button field: LSC_subsequent_offence_yes_c
 ---
 question: Notice
 subquestion: |
-  display penalties for first offence wth child in car
+  If this is your first DUI offence you have been charged with, and you had a child under the age of 16 in the car, then you will be fined between $1100 and $1600.
+ 
+  Or, you may face up to 3 months imprisonment, you will need to undergo an alcohol dependency assessment and get 6 demerit points.
+ 
+  If you are convicted, you will be disqualified from driving for a minimum of 12 months.
+
 continue button field: LSC_first_offence_yes_c
 ---
 # REFUSE BREATH TEST SCREENS - ANARA
 question: Question
 subquestion: |
-  Is this the first time you have refused to do a breath alcotest?
-fields: 
-  - no label: LSC_first_offence_q_RT
-    datatype: yesnoradio
+  first offence question for refusing breath test (RT) 
+field: LSC_first_offence_q_RT
+buttons:
+  - "No"
+  - "Yes"
 ---
 question: Question
 subquestion: |
-  Was a child under the age of 16 years present in the vehicle when you refused the breath alcotest?
-fields:
-  - no label: LSC_child_present_RT
-    datatype: yesnoradio 
+  child present when present for subsequent RT offence
+field: LSC_child_present_RT
+buttons:
+  - "No"
+  - "Yes"
 ---
-event: LSC_subsequent_RT_no_c
 question: Notice
 subquestion: |
-  You should expect to see a $1900 - $2900 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 36 months. If you would like to learn more, please click here. 
-  
-  You have committed what is known as a ‘serious offence’. Because of this, you will also have an ‘alcohol interlock device’ fitted to your vehicle for the same time that your licence is disqualified for. For example, if your licence is disqualified for 3 years, you will have the device attached to your vehicle for another 3 years once you have your licence back. 
-  
-  These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
-  
-  There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
-
-buttons: 
-  - Continue: continue 
-  - Restart: restart
+  display penalties for subsequent RT with no child in car
+continue button field: LSC_subsequent_RT_no_c
 ---
-event: LSC_subsequent_RT_yes_c
 question: Notice
 subquestion: |
-  You should expect to see a $1900 - $2900 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 36 months. You will also need to do an alcohol dependence assessment. If you would like to learn more, please click here. 
-  
-  You have committed what is known as a ‘serious offence’. Because of this, you will also have an ‘alcohol interlock device’ fitted to your vehicle for the same time that your licence is disqualified for. For example, if your licence is disqualified for 3 years, you will have the device attached to your vehicle for another 3 years once you have your licence back. 
-  
-  These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
-  
-  There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
-buttons: 
-  - Continue: continue
-  - Restart: restart
+  display penalties for subsequent RT offence with child in car 
+continue button field: LSC_subsequent_RT_yes_c
 ---
 question: Question
 subquestion: |
-  Was a child under the age of 16 years in the vehicle when you refused the breath alcotest?
-fields:
-  - no label: LSC_child_present_first_RT
-    datatype: yesnoradio
+  First RT offence - child present question
+field: LSC_child_present_first_RT
+buttons:
+  - "No"
+  - "Yes"
 ---
-event: LSC_first_RT_no_c
 question: Notice
 subquestion: |
-  You should expect to get a $1160 - $1600 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 12 months from the date of the offence. 
-  
-  You have committed what is known as a ‘serious offence’. Because of this, you will also have an ‘alcohol interlock device’ fitted to your vehicle for the same time that your licence is disqualified for. For example, if your licence is disqualified for 3 years, you will have the device attached to your vehicle for another 3 years once you have your licence back. 
-  
-  These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
-  
-  There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
-buttons: 
-  - Continue: continue
-  - Restart: restart
+  display penalties for frist RT offence with no child
+continue button field: LSC_first_RT_no_c
 ---
-event: LSC_first_RT_yes_c
 question: Notice
 subquestion: |
-  You should expect to get a $1160 - $1600 fine and 6 demerit points. If you are convicted, your driver’s licence will be taken away for at least 12 months from the date of the offence. You will also need to do an alcohol dependence assessment. 
-  
-  You have committed what is known as a ‘serious offence’. Because of this, you will also have an ‘alcohol interlock device’ fitted to your vehicle for the same time that your licence is disqualified for. For example, if your licence is disqualified for 3 years, you will have the device attached to your vehicle for another 3 years once you have your licence back. 
-  
-  These devices are about the size of a smartphone and are attached to your car. You will be responsible for all costs of attaching it to your vehicle and for its upkeep.
-  
-  There are strict requirements for drivers with these devices and it is an offence to break any of the conditions of the scheme. You will be told these conditions prior to your use, but if you would like to learn more, please click here.
-buttons: 
-  - Continue: continue
-  - Restart: restart
+  display penalties for first RT offence with child
+continue button field: LSC_first_RT_yes_c
 ---
 # PCA SCREENS - JOSH
 question: Question
 subquestion: |
   PCA offence - licence class question
-fields:
-  - no label: LSC_licence_class
-    datatype: radio
-    choices:
-      - Learners or Provisional licence: LSC_learners_provisional
-      - Full licence: LSC_full_license 
+field: LSC_licence_class
+buttons:
+  - "LSC_full_license"
+  - "LSC_learners_provisional"
 ---
 question: Notice
 subquestion: |
@@ -198,20 +165,19 @@ continue button field: LSC_provisional_PCA
 question: Question
 subquestion: |
   full licence PCA - first offence question
-fields:
-  - no label: LSC_PCA_first_offence_question
-    datatype: yesnoradio 
+field: LSC_PCA_first_offence_question
+buttons:
+  - "No"
+  - "Yes"
 ---
 question: Question
 subquestion: |
   first offence BAC range question
-fields: 
-  - no label: LSC_BAC_range_question
-    datatype: radio
-    choices: 
-      - Below 0.08: LSC_low_BAC
-      - Between 0.08 - 0.15: LSC_mid_BCA
-      - Greater than 0.15: LSC_high_BAC
+field: LSC_BAC_range_question
+buttons:
+  - "LSC_high_BAC"
+  - "LSC_low_BAC"
+  - "LSC_mid_BCA"
 ---
 question: Notice
 subquestion: |
@@ -221,9 +187,10 @@ continue button field: LSC_FO_PCA_low_BAC
 question: Question
 subquestion: |
   first offence - mid BAC - child present question
-fields:
-  - no label: LSC_PCA_FO_PCA_mid_BAC_child_question
-    datatype: yesnoradio 
+field: LSC_PCA_FO_PCA_mid_BAC_child_question
+buttons:
+  - "No"
+  - "Yes"
 ---
 question: Notice
 subquestion: |
@@ -238,9 +205,10 @@ continue button field: LSC_FO_PCA_mid_BAC_yes_c
 question: Question
 subquestion: |
   high BAC PCA - child presnet? 
-fields:
-  - no label: LSC_PCA_FO_high_BAC_child_question
-    datatype: yesnoradio 
+field: LSC_PCA_FO_high_BAC_child_question
+buttons:
+  - "No"
+  - "Yes"
 ---
 question: Notice
 subquestion: |
@@ -255,46 +223,38 @@ continue button field: LSC_PCA_FO_high_BAC_child_y
 question: Question
 subquestion: |
   which subsequent offence bracket 
-fields:
-  - no label: LSC_PCA_subsequent_offence_number_question
-    datatype: radio 
-    choices:
-      - Second offence: LSC_PCA_second
-      - Third offence: LSC_PCA_third
-      - Fourth of subsequent offence: LSC_PCA_subsequent
+field: LSC_PCA_subsequent_offence_number_question
+buttons:
+  - "LSC_PCA_second"
+  - "LSC_PCA_subsequent"
+  - "LSC_PCA_third"
 ---
 question: Question
 subquestion: |
   second offence BAC question
-fields: 
-  - no label: LSC_PCA_SO_BAC_question
-    datatype: radio
-    choices: 
-      - Below 0.08: LSC_low_BAC_so
-      - Between 0.08 - 0.15: LSC_mid_BAC_so
-      - Greater than 0.15: LSC_high_BAC_so
+field: LSC_PCA_SO_BAC_question
+buttons:
+  - "LSC_high_BAC_so"
+  - "LSC_low_BAC_so"
+  - "LSC_mid_BAC_so"
 ---
 question: Question
 subquestion: |
   third offence BAC question
-fields: 
-  - no label: LSC_PCA_TO_BAC_question
-    datatype: radio
-    choices: 
-      - Below 0.08: LSC_low_BAC_to
-      - Between 0.08 - 0.15: LSC_mid_BAC_to
-      - Greater than 0.15: LSC_high_BAC_to
+field: LSC_PCA_TO_BAC_question
+buttons:
+  - "LSC_high_BAC_to"
+  - "LSC_low_BAC_to"
+  - "LSC_mid_BAC_to"
 ---
 question: Question
 subquestion: |
   subsequent offence BAC question
-fields:
-  - no label: LSC_PCA_SUB_BAC_question
-    datatype: radio 
-    choices: 
-      - Below 0.08: LSC_SUB_low_BAC
-      - Between 0.08 - 0.15: LSC_SUB_mid_BAC
-      - Greater than 0.15: LSC_SUB_high_BAC
+field: LSC_PCA_SUB_BAC_question
+buttons:
+  - "LSC_SUB_high_BAC"
+  - "LSC_SUB_low_BAC"
+  - "LSC_SUB_mid_BAC"
 ---
 question: Notice
 subquestion: |
@@ -304,9 +264,10 @@ continue button field: LSC_PCA_SO_low_BAC
 question: Question
 subquestion: |
   SECOND OFFENCE - mid range BAC - child present question
-fields:
-  - no label: LSC_PCA_SO_mid_BAC_child_question
-    datatype: yesnoradio 
+field: LSC_PCA_SO_mid_BAC_child_question
+buttons:
+  - "No"
+  - "Yes"
 ---
 question: Notice
 subquestion: |
@@ -321,9 +282,10 @@ continue button field: LSC_PCA_SO_mid_BAC_child_y
 question: Question
 subquestion: |
   high BAC - was child present? second offence
-fields:
-  - no label: LSC_PCA_SO_high_BAC_child_question
-    datatype: yesnoradio 
+field: LSC_PCA_SO_high_BAC_child_question
+buttons:
+  - "No"
+  - "Yes"
 ---
 question: Notice
 subquestion: |
@@ -343,9 +305,10 @@ continue button field: LSC_PCA_TO_low_BAC
 question: Question
 subquestion: |
   BAC question for third offence
-fields:
-  - no label: LSC_PCA_TO_mid_BAC_questions
-    datatype: yesnoradio 
+field: LSC_PCA_TO_mid_BAC_questions
+buttons:
+  - "No"
+  - "Yes"
 ---
 question: Notice
 subquestion: |
@@ -360,9 +323,10 @@ continue button field: LSC_PCA_TO_mid_BAC_child_n
 question: Question
 subquestion: |
   high BAC child present question
-fields:
-  - no label: LSC_PCA_TO_high_BAC_child_question
-    datatype: yesnoradio 
+field: LSC_PCA_TO_high_BAC_child_question
+buttons:
+  - "No"
+  - "Yes"
 ---
 question: Notice
 subquestion: |
@@ -382,9 +346,10 @@ continue button field: LSC_SUB_low_BAC
 question: Question
 subquestion: |
   subsequent offence - mid BAC child question
-fields:
-  - no label: LSC_PCA_SUB_mid_BAC_child_quesiton
-    datatype: yesnoradio 
+field: LSC_PCA_SUB_mid_BAC_child_quesiton
+buttons:
+  - "No"
+  - "Yes"
 ---
 question: Notice
 subquestion: |
@@ -399,9 +364,10 @@ continue button field: LSC_PCA_SUB_mid_BAC_child_n
 question: Question
 subquestion: |
   subsequent offence high BAC - child question
-fields:
-  - no label: LSC_PCA_SUB_high_BAC_child_question
-    datatype: yesnoradio
+field: LSC_PCA_SUB_high_BAC_child_question
+buttons:
+  - "No"
+  - "Yes"
 ---
 question: Notice
 subquestion: |
