@@ -63,7 +63,12 @@ fields:
 ---
 question: Notice
 subquestion: |
-  display penalties for subsequent DUI offence with no child
+  If this is not the first time you have been charged with a DUI offence, then you will be fined between $1900 and $2900.
+ 
+  Or, you may face up to 3 months imprisonment and get 6 demerit points.
+ 
+  If you are convicted, you will be disqualified from driving for a minimum of 36 months.
+
 continue button field: LSC_subsequent_offence_no_c
 ---
 # MISC SCREEN - ELENI
