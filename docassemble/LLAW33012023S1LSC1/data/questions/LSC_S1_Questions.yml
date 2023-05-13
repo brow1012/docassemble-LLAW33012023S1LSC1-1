@@ -90,17 +90,17 @@ buttons:
 ---
 question: Notice
 subquestion: |
-  display penalties for subsequent offence with child in car
+  If this is not the first time you have been charged with a DUI offence, then you will be fined between $1900 and $2900.
+ 
+  Or, you may face up to 6 months imprisonment you will need to undergo an alcohol dependency assessment and get 6 demerit points.
+ 
+  If you are convicted, you will be disqualified from driving for a minimum of 36 months.
+
 continue button field: LSC_subsequent_offence_yes_c
 ---
 question: Notice
 subquestion: |
-  If this is your first DUI offence you have been charged with, and you had a child under the age of 16 in the car, then you will be fined between $1100 and $1600.
- 
-  Or, you may face up to 3 months imprisonment, you will need to undergo an alcohol dependency assessment and get 6 demerit points.
- 
-  If you are convicted, you will be disqualified from driving for a minimum of 12 months.
-
+  display penalties for first offence wth child in car
 continue button field: LSC_first_offence_yes_c
 ---
 # REFUSE BREATH TEST SCREENS - ANARA
