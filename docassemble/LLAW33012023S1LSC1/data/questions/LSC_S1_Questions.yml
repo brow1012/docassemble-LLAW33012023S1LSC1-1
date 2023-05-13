@@ -26,7 +26,10 @@ fields:
 question: Not charged with other- seeking general info
 subquestion: |
   screen content 
-continue button field: LSC_seeking_gen_info
+field: LSC_seeking_gen_info
+buttons: 
+  - Proceed: proceed
+  - Exit: exit
 ---
 event: LSC_gen_info_screen
 question: End
@@ -396,9 +399,9 @@ buttons:
 ---
 question: Question
 subquestion: |
-  BAC question for third offence
+  child question for third offence
 fields:
-  - no label: LSC_PCA_TO_mid_BAC_questions
+  - no label: LSC_PCA_TO_mid_BAC_child_question
     datatype: yesnoradio 
 ---
 question: Notice
